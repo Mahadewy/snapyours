@@ -1,0 +1,16 @@
+.container-fluid {
+    margin-top: 32px;
+    position: fixed;
+}
+
+.container-fluid > img {
+    width: 50px;
+    height: 50px;
+}
+
+.d-flex {
+    width: 800px;
+    margin-left: 40px;
+}
+
+
