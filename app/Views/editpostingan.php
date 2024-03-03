@@ -35,8 +35,13 @@
 
     <div class="mb-3">
       <input type="file" name="foto" class="form-control" aria-label="file example">
+      <input type="hidden" name="foto_lama" value="<?= $foto['foto']; ?>">
+    <input type="hidden" name="user_id" value="<?= $foto['user_id']; ?>">
       <div class="invalid-feedback">Pilih foto</div>
     </div>
+
+    <input type="hidden" name="foto_lama" value="<?= $foto['foto']; ?>">
+    <input type="hidden" name="user_id" value="<?= $foto['user_id']; ?>">
 
     <div class="mb-3">
       <button class="btn btn-dark" type="submit">Perbarui Unggahan</button>

@@ -50,11 +50,19 @@ class Unggah extends BaseController
 
     public function update($id)
     {
+
+        // ambil gambar
+        $fileDokumen = $this->request->getFile('foto');
+        $newName = $fileDokumen->getRandomName();
+        $fileDokumen->move('image_storage', $newName);
+
         $this->FotoModel->save([
             "foto_id" => $id,
             "judul_foto" => $this->request->getVar('JudulFoto'),
             'deskripsi_foto' => $this->request->getVar('DeskripsiFoto'),
             'kategori' => $this->request->getVar('kategori'),
+            'foto' => $newName,
+
         ]);
 
         session()->setFlashdata('pesan', 'Data Berhasil Diubah');
